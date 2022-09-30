@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: lightPink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 40%;
+  min-height: 30%;
+  max-height: 70%;
+  overflow: auto;
+  background: white;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 10px 20px 10px 20px;
+}
+
+/* form styling start */
+
+.container .input-form {
+  width: 100%;
+}
+
+.container form {
+  height: 30px;
+  margin-top: 12px;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 3fr 1fr;
+}
+.container form input {
+  outline: none;
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 14px;
+  padding: 5px;
+  width: 100%;
+}
+.container form button {
+  height: 100%;
+  width: 100%;
+}
+
+.container .input-form .error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* form styling end */
+
+/* list-items start */
+
+.list-items {
+  margin-top: 20px;
+}
+
+.list-items .card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid lightgrey;
+}
+
+.list-items .card button {
+  margin-left: auto;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* list-items end */
+
+/* side options start */
+
+.card {
+  position: relative;
+}
+
+.side-options {
+  position: absolute;
+  top: 41px;
+  right: 0;
+  line-height: 25px;
+  background: lightblue;
+  border-radius: 0px 0px 5px 5px;
+  padding: 3px;
+  z-index: 1;
+}
+
+.side-options p {
+  font-size: 14px;
+}
+
+.dNone {
+  display: none;
+}
+
+/* side options end */
