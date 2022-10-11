@@ -73,8 +73,8 @@ body {
   gap: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   padding: 10px;
-  margin-bottom: 10px;
   border: 1px solid lightgrey;
+  position: relative;
 }
 
 .list-items .card button {
@@ -90,27 +90,82 @@ body {
 
 /* side options start */
 
-.card {
-  position: relative;
+.list-item {
+  margin-bottom: 10px;
 }
 
-.side-options {
-  position: absolute;
-  top: 41px;
-  right: 0;
-  line-height: 25px;
-  background: lightblue;
-  border-radius: 0px 0px 5px 5px;
-  padding: 3px;
-  z-index: 1;
+.list-item .ed {
+  display: none;
 }
 
-.side-options p {
-  font-size: 14px;
+.list-item .edit-submit {
+  display: none;
 }
 
+.list-item .done-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightgrey;
+  border-top: none;
+  padding: 5px;
+}
+
+.list-item .done-section .done-btn {
+  background: rgb(95, 167, 95);
+  color: white;
+  border: 1px solid black;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+}
+
+.edit-delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid lightgrey;
+  border-top: none;
+  padding: 5px 0px 5px 0px;
+}
+
+.edit-delete button {
+  padding: 5px 10px 5px 10px;
+  background: transparent;
+  border: 1px solid black;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-delete .edit {
+  background: rgb(85, 88, 179);
+}
+
+.edit-delete .delete {
+  background-color: salmon;
+}
+
+.dBlock {
+  display: block;
+}
+
+.dIBlock {
+  display: inline-block;
+}
 .dNone {
   display: none;
 }
 
 /* side options end */
+
+/* .edit-input start */
+
+.card .edit-input {
+  display: none;
+}
+
+.card .cancel-btn {
+  display: none;
+}
+
+/* .edit-input end */
