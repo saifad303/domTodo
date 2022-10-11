@@ -19,21 +19,25 @@ addBtn.addEventListener("click", (e) => {
 // program functionalities start.
 
 function add(title) {
-  const data = {
-    id: Date.now(),
-    title: title,
-  };
+  if (title) {
+    const data = {
+      id: Date.now(),
+      title: title,
+    };
 
-  const allData = getItem("todo");
-  // console.log([...allData, data]);
-  if (allData) {
-    setItem("todo", [data, ...allData]);
+    const allData = getItem("todo");
+    // console.log([...allData, data]);
+    if (allData) {
+      setItem("todo", [data, ...allData]);
+    } else {
+      setItem("todo", [data]);
+    }
+    listInput.value = "";
+    error.innerText = "";
+    showList();
   } else {
-    setItem("todo", [data]);
+    alert("write something as title.");
   }
-  listInput.value = "";
-  error.innerText = "";
-  showList();
 }
 
 function showList() {
